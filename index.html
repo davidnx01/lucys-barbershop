@@ -1,0 +1,349 @@
+<!doctype html><html lang="sk"><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Lucy's Barbershop · barbershop v Kysuckom Novom Meste — neoficiálny návrh</title>
+<meta name="description" content="Neoficiálny návrh webu pre Lucy's Barbershop, Belanského 193, Kysucké Nové Mesto. Pánske strihy, fade, brada, junior a študentský strih.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Instrument+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --felt:#17213A;--felt2:#202C4C;--red:#B4262F;--red2:#8E1B23;--gold:#E0AE45;
+  --chalk:#ECEEF0;--paper:#F7F8F9;--ink:#121826;--mute:#4A5266;
+  --line:rgba(18,24,38,.14);--lineL:rgba(236,238,240,.18);
+  --slab:"Alfa Slab One",Georgia,serif;--sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--sans);color:var(--ink);background:var(--chalk);font-size:17px;line-height:1.55;padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.wrap{width:min(1140px,100% - 40px);margin-inline:auto}
+.num{font-variant-numeric:tabular-nums}
+.lab{font:600 12px/1.2 var(--sans);letter-spacing:.16em;text-transform:uppercase}
+
+/* notice */
+.notice{background:var(--gold);color:var(--ink);font-size:13.5px;line-height:1.4;padding:8px 16px;text-align:center;font-weight:500}
+
+/* header */
+.top{background:var(--felt);color:var(--chalk);border-bottom:1px solid var(--lineL)}
+.top .wrap{display:flex;align-items:center;gap:28px;min-height:70px}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none}
+.brand svg{width:34px;height:22px;flex:none}
+.brand b{font:400 22px/1 var(--slab);letter-spacing:.01em}
+.brand small{display:block;font:600 10.5px/1 var(--sans);letter-spacing:.24em;text-transform:uppercase;color:var(--gold);margin-top:4px}
+.nav{display:flex;gap:24px;margin-left:auto}
+.nav a,.tel{text-decoration:none;font-weight:500;font-size:15px;background:linear-gradient(currentColor,currentColor) 0 100%/0 1px no-repeat;transition:background-size .2s;padding:12px 0}
+.nav a:hover,.tel:hover{background-size:100% 1px}
+.tel{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;font:600 15px/1 var(--sans);text-decoration:none;border:2px solid transparent;transition:background-color .2s,color .2s}
+.btn-red{background:var(--red);color:#fff}
+.btn-red:hover{background:var(--red2)}
+.btn-line{border-color:rgba(236,238,240,.55);color:var(--chalk)}
+.btn-line:hover{background:var(--chalk);color:var(--felt)}
+.top .btn{min-height:44px;padding:0 18px}
+
+/* hero */
+.hero{background:var(--noise),var(--felt);color:var(--chalk);position:relative;overflow:hidden}
+.hero-in{display:grid;grid-template-columns:1.25fr .75fr;gap:56px;align-items:center;padding:64px 0 72px}
+.hero .lab{color:var(--gold)}
+.flag{display:block;margin:20px 0 26px;width:100%;max-width:700px;transform:rotate(-3deg);transform-origin:0 50%;filter:drop-shadow(0 10px 0 rgba(0,0,0,.18))}
+.flag svg{width:100%;height:auto;display:block}
+.hero h1{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.lead{font-size:19px;max-width:30em;color:#D6DAE2}
+.lead q{color:#fff}
+.lead cite{display:block;font-style:normal;font-size:13px;color:#9AA3B6;margin-top:6px}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.photo{position:relative;justify-self:end;width:min(100%,430px)}
+.photo figure{background:var(--paper);padding:12px 12px 16px;transform:rotate(2deg);box-shadow:0 14px 0 rgba(0,0,0,.2)}
+.photo img{width:100%;aspect-ratio:1;object-fit:cover}
+.photo figcaption{font-size:13px;color:var(--mute);padding-top:10px;display:flex;justify-content:space-between}
+.pin{position:absolute;top:-10px;left:50%;width:16px;height:16px;border-radius:50%;background:var(--red);box-shadow:inset -3px -3px 0 rgba(0,0,0,.25);z-index:2}
+.stack{position:absolute;left:-46px;bottom:74px;display:grid;gap:8px;z-index:3}
+.mini{font:400 17px/1 var(--slab);letter-spacing:.06em;padding:11px 46px 11px 18px;clip-path:polygon(0 0,100% 42%,100% 58%,0 100%);background:var(--noise),var(--red);color:var(--gold);position:relative}
+.mini::before{content:"";position:absolute;left:0;top:0;bottom:0;width:6px;background:rgba(255,255,255,.75)}
+.mini.g{background:var(--noise),var(--gold);color:var(--felt)}
+.mini.c{background:var(--noise),var(--chalk);color:var(--red)}
+.facts{border-top:1px solid var(--lineL);display:grid;grid-template-columns:repeat(4,1fr)}
+.facts div{padding:20px 22px 22px 0;font-size:14.5px;color:#C8CDD8}
+.facts div+div{padding-left:22px;border-left:1px solid var(--lineL)}
+.facts strong{display:block;font:400 22px/1.15 var(--slab);color:var(--chalk);margin-bottom:4px}
+.facts strong .st{color:var(--gold)}
+
+/* pennant headings */
+.pen{display:inline-block;position:relative;font:400 clamp(28px,4vw,42px)/1 var(--slab);color:var(--gold);background:var(--noise),var(--red);padding:20px 3em 20px 30px;clip-path:polygon(0 0,100% 34%,100% 66%,0 100%);letter-spacing:.02em;white-space:nowrap}
+.pen::before{content:"";position:absolute;left:0;top:0;bottom:0;width:10px;background:var(--chalk)}
+.pen.navy{background:var(--noise),var(--felt);color:var(--chalk)}
+.pen.navy::before{background:var(--gold)}
+.sec{padding:84px 0}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.sec-head p{max-width:30em;color:var(--mute)}
+
+/* money block */
+.price{background:var(--noise),var(--felt2);color:var(--chalk)}
+.price .sec-head p{color:#B9C0CF}
+.price .pen{background:var(--noise),var(--gold);color:var(--felt)}
+.price .pen::before{background:var(--red)}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:56px}
+.big{position:relative;padding:28px 30% 28px 42px;background:var(--noise),var(--red);clip-path:polygon(0 0,100% 30%,100% 70%,0 100%);min-height:190px;display:flex;flex-direction:column;justify-content:center}
+.big::before{content:"";position:absolute;left:0;top:0;bottom:0;width:14px;background:var(--chalk)}
+.big.alt{background:var(--noise),var(--chalk);color:var(--felt)}
+.big.alt::before{background:var(--red)}
+.big b{font:400 clamp(27px,3.6vw,46px)/1 var(--slab);color:var(--gold);letter-spacing:.03em}
+.big.alt b{color:var(--red)}
+.big span{font-size:15px;font-weight:500;margin-top:8px}
+.big em{font:700 30px/1 var(--sans);font-style:normal;margin-top:14px;font-variant-numeric:tabular-nums}
+.cols{display:grid;grid-template-columns:repeat(4,1fr);gap:0 36px}
+.cols h3{font:400 21px/1.2 var(--slab);color:var(--gold);padding-bottom:12px;border-bottom:2px solid var(--gold);margin-bottom:6px}
+.cols ul{list-style:none}
+.cols li{display:grid;grid-template-columns:1fr auto;align-items:center;gap:4px 12px;padding:13px 0;border-bottom:1px solid var(--lineL)}
+.cols li span{font-weight:500;line-height:1.3}
+.cols li small{grid-column:1;font-size:13px;color:#9EA7BA}
+.tag{grid-row:1 / span 2;grid-column:2;font:700 16px/1 var(--sans);font-variant-numeric:tabular-nums;color:#fff;background:var(--red);padding:9px 24px 9px 12px;clip-path:polygon(0 0,100% 38%,100% 62%,0 100%);min-width:64px}
+.src{margin-top:32px;font-size:13.5px;color:#9EA7BA;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}
+.src a{color:var(--gold)}
+
+/* gallery */
+.cuts{display:grid;grid-template-columns:repeat(2,minmax(0,340px)) 1fr;gap:36px;align-items:start}
+.igt{align-self:stretch;background:var(--noise),var(--felt);color:var(--chalk);padding:34px 30px;display:flex;flex-direction:column;justify-content:center;gap:18px;border:10px solid var(--paper);box-shadow:0 10px 0 rgba(18,24,38,.08);margin-bottom:0}
+.igt .lab{color:var(--gold)}
+.igt .mini{align-self:flex-start}
+.igt p{color:#C8CDD8;font-size:15.5px}
+.igt a{color:var(--gold);font-weight:700;text-underline-offset:4px;text-decoration-thickness:1px;padding:8px 0}
+.cuts figure{position:relative;min-width:0}
+.cuts img{width:100%;aspect-ratio:11/10;object-fit:cover;transition:transform .5s}
+.cuts .fr{overflow:hidden;border:10px solid var(--paper);box-shadow:0 10px 0 rgba(18,24,38,.08)}
+.cuts figure:hover img{transform:scale(1.045)}
+.cuts figcaption{position:absolute;left:-8px;bottom:22px;font:400 15px/1 var(--slab);letter-spacing:.04em;color:var(--gold);background:var(--noise),var(--felt);padding:10px 44px 10px 14px;clip-path:polygon(0 0,100% 34%,100% 66%,0 100%);white-space:nowrap}
+.more{margin-top:30px;font-weight:600}
+.more a{color:var(--red);text-decoration-thickness:1px;text-underline-offset:4px}
+
+/* about */
+.about{background:var(--paper);border-block:1px solid var(--line)}
+.about .wrap{display:grid;grid-template-columns:300px 1fr;gap:64px;align-items:center}
+.patch{background:#101010;padding:18px;outline:2px dashed var(--gold);outline-offset:-10px;transform:rotate(-4deg);max-width:300px}
+.patch img{width:100%;max-width:264px;margin:auto}
+.quote{font:400 clamp(24px,3vw,34px)/1.25 var(--slab);color:var(--felt)}
+.quote::before{content:"„";color:var(--red)}
+.quote::after{content:"“";color:var(--red)}
+.about cite{display:block;font-style:normal;color:var(--mute);margin:14px 0 26px;font-size:14px}
+.who{display:flex;flex-wrap:wrap;gap:10px}
+.who span{border:1px solid var(--line);padding:8px 14px;font-weight:500;font-size:15px;background:var(--chalk)}
+
+/* contact */
+.ways{display:grid;grid-template-columns:repeat(3,1fr);border-top:2px solid var(--ink)}
+.ways > div{padding:26px 26px 30px 0}
+.ways > div+div{padding-left:26px;border-left:1px solid var(--line)}
+.ways h3{font:400 22px/1.2 var(--slab);margin:10px 0 8px;color:var(--felt)}
+.ways .lab{color:var(--red)}
+.ways p{color:var(--mute);font-size:15.5px}
+.ways a.big-l{display:inline-block;margin-top:14px;font-weight:700;font-size:18px;text-decoration:none;border-bottom:2px solid var(--red);padding:6px 0}
+.info{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:46px;padding:28px;background:var(--noise),var(--felt);color:var(--chalk)}
+.info .lab{color:var(--gold);display:block;margin-bottom:8px}
+.info a{color:var(--chalk);text-underline-offset:4px;text-decoration-thickness:1px}
+.info small{display:block;color:#9EA7BA;font-size:13px;margin-top:4px}
+
+/* footer */
+.foot{background:var(--ink);color:#A9B0C0;font-size:14px;padding:30px 0}
+.foot .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.foot b{font:400 18px/1 var(--slab);color:var(--chalk)}
+.mbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:none;grid-template-columns:1fr 1fr;gap:8px;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:var(--felt);border-top:1px solid var(--lineL)}
+.mbar a{min-height:50px}
+
+@media (max-width:1000px){
+  .hero-in{grid-template-columns:1fr;gap:44px}
+  .photo{justify-self:start;margin-left:40px}
+  .cols{grid-template-columns:1fr 1fr;gap:28px 36px}
+  .feat{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr 1fr}
+  .facts div:nth-child(3){padding-left:0;border-left:0}
+  .facts div:nth-child(n+3){border-top:1px solid var(--lineL)}
+}
+@media (max-width:760px){
+  body{font-size:16px}
+  .nav,.top .btn{display:none}
+  .top .wrap{justify-content:space-between}
+  .hero-in{padding:40px 0 48px}
+  .flag{margin:16px 0 22px}
+  .lead{font-size:17px}
+  .photo{margin-left:28px;width:calc(100% - 40px)}
+  .stack{left:-36px;bottom:62px}
+  .mini{font-size:14px;padding:9px 36px 9px 14px}
+  .sec{padding:60px 0}
+  .pen{padding:16px 2.8em 16px 24px;font-size:26px}
+  .big{padding:22px 26% 22px 30px;min-height:160px}
+  .big span{font-size:14px}
+  .big em{font-size:26px;margin-top:10px}
+  .cols{grid-template-columns:1fr}
+  .cuts{grid-template-columns:1fr 1fr;gap:16px}
+  .cuts .fr{border-width:6px}
+  .igt{grid-column:1 / -1;border-width:6px;padding:26px 22px}
+  .cuts figcaption{position:static;display:inline-block;margin:10px 0 0 -6px;font-size:12px;padding:8px 30px 8px 10px}
+  .about .wrap{grid-template-columns:1fr;gap:40px}
+  .patch{max-width:220px;margin-left:8px}
+  .ways{grid-template-columns:1fr}
+  .ways > div,.ways > div+div{padding:22px 0;border-left:0}
+  .ways > div+div{border-top:1px solid var(--line)}
+  .info{grid-template-columns:1fr;padding:22px}
+  .mbar{display:grid}
+  .facts div,.facts div+div{padding:16px 12px 18px 0}
+  .facts div:nth-child(even){padding-left:14px}
+  .facts strong{font-size:16px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+
+<div class="notice" role="note">Neoficiálny návrh — nie je to oficiálny web podniku · ukážka od webdavid.sk, objednávky ani rezervácie tu nefungujú</div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#" aria-label="Lucy's Barbershop — úvod">
+      <svg viewBox="0 0 34 22" aria-hidden="true"><rect width="4" height="22" fill="#ECEEF0"/><path d="M4 0 34 9.5v3L4 22z" fill="#B4262F"/></svg>
+      <span><b>Lucy's</b><small>Barbershop</small></span>
+    </a>
+    <nav class="nav" aria-label="Hlavná navigácia"><a href="#cennik">Cenník</a><a href="#strihy">Strihy</a><a href="#kontakt">Kontakt</a></nav>
+    <a class="tel num" href="tel:+421904599821">0904 599 821</a>
+    <a class="btn btn-red" href="https://www.notino.sk/salony/lucys-barbershop/" rel="noopener" target="_blank">Rezervovať</a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-in">
+    <div>
+      <p class="lab">Barbershop · Kysucké Nové Mesto</p>
+      <h1>Lucy's Barbershop</h1>
+      <div class="flag" aria-hidden="true">
+        <svg viewBox="0 0 600 230">
+          <defs>
+            <filter id="felt" x="0" y="0" width="100%" height="100%"><feTurbulence type="fractalNoise" baseFrequency=".85" numOctaves="3" result="t"/><feColorMatrix in="t" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .22 0" result="d"/><feComposite in="d" in2="SourceGraphic" operator="in"/><feBlend in="SourceGraphic" mode="multiply"/></filter>
+          </defs>
+          <rect x="0" y="0" width="30" height="230" fill="#ECEEF0"/>
+          <path d="M30 0 600 103v24L30 230z" fill="#B4262F" filter="url(#felt)"/>
+          <path d="M44 14 548 105.5v19L44 216z" fill="none" stroke="#E0AE45" stroke-width="2" stroke-dasharray="7 6" opacity=".8"/>
+          <text x="64" y="128" font-family="Alfa Slab One, Georgia, serif" font-size="96" fill="#E0AE45" letter-spacing="2">LUCY'S</text>
+          <text x="68" y="168" font-family="Instrument Sans, sans-serif" font-weight="700" font-size="21" fill="#ECEEF0" letter-spacing="8">BARBERSHOP · KNM</text>
+        </svg>
+      </div>
+      <p class="lead">Pánske strihy, fade a úprava brady v Kysuckom Novom Meste. Junior strih do 10 rokov za 9 €, študentský do 20 rokov za 14 €.<cite>Ceny podľa profilu na Notino Salóny, 4. 10. 2026</cite></p>
+      <div class="cta">
+        <a class="btn btn-red" href="tel:+421904599821">Zavolať 0904 599 821</a>
+        <a class="btn btn-line" href="https://www.notino.sk/salony/lucys-barbershop/" rel="noopener" target="_blank">Rezervácia cez Notino</a>
+      </div>
+    </div>
+    <div class="photo">
+      <span class="pin" aria-hidden="true"></span>
+      <figure>
+        <img src="assets/strih-low-fade.webp" width="375" height="375" alt="Tmavé vlasy s plynulým fade na boku a za uchom, pohľad zozadu" fetchpriority="high">
+        <figcaption><span>Fade</span><span>@lucys.barber</span></figcaption>
+      </figure>
+      <div class="stack" aria-label="Fade, Beard, Classic — z profilu na Instagrame">
+        <span class="mini">FADE</span><span class="mini g">BEARD</span><span class="mini c">CLASSIC</span>
+      </div>
+    </div>
+  </div>
+  <div class="wrap facts">
+    <div><strong><span class="st">★</span> <span class="num">5,0</span></strong>Notino · 3 hodnotenia (4. 10. 2026)</div>
+    <div><strong>Belanského 193</strong>Kysucké Nové Mesto</div>
+    <div><strong>Na objednanie</strong>telefón, Notino alebo DM</div>
+    <div><strong>Junior · Študent</strong>strihy do 10 a do 20 rokov</div>
+  </div>
+</section>
+
+<section class="price sec" id="cennik" aria-labelledby="h-cennik">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="pen" id="h-cennik">Cenník</h2>
+      <p>Ceny a trvanie podľa profilu na Notino Salóny (4. 10. 2026). Pri žiadnej položke nejde o cenu „od“.</p>
+    </div>
+    <div class="feat">
+      <div class="big"><b>JUNIOR</b><span>Junior strih · do 10 rokov · 30 min</span><em>9 €</em></div>
+      <div class="big alt"><b>ŠTUDENT</b><span>Študentský strih · do 20 rokov · 40 min</span><em>14 €</em></div>
+    </div>
+    <div class="cols">
+      <div>
+        <h3>Pánske strihy</h3>
+        <ul>
+          <li><span>Klasický pánsky strih</span><small>30 min</small><b class="tag">15 €</b></li>
+          <li><span>Klasický fade</span><small>40 min</small><b class="tag">17 €</b></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Brada</h3>
+        <ul><li><span>Úprava brady</span><small>30 min</small><b class="tag">10 €</b></li></ul>
+      </div>
+      <div>
+        <h3>Kombinácie</h3>
+        <ul>
+          <li><span>Pánsky strih + brada</span><small>1 h</small><b class="tag">25 €</b></li>
+          <li><span>Fade + brada</span><small>1 h</small><b class="tag">27 €</b></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Dámske strihy</h3>
+        <ul>
+          <li><span>Dámsky strih</span><small>30–60 min</small><b class="tag">15 €</b></li>
+          <li><span>Strih s fúkanou</span><small>1 h</small><b class="tag">22 €</b></li>
+        </ul>
+      </div>
+    </div>
+    <p class="src"><span>Zdroj: notino.sk/salony/lucys-barbershop · stav k 4. 10. 2026, overiť</span><a href="https://www.notino.sk/salony/lucys-barbershop/" rel="noopener" target="_blank">Termín si vyberiete na Notino →</a></p>
+  </div>
+</section>
+
+<section class="sec" id="strihy" aria-labelledby="h-strihy">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="pen navy" id="h-strihy">Hotové strihy</h2>
+      <p>Z Instagramu barbershopu — vzory strojčekom aj textúrovaný vrch s fade.</p>
+    </div>
+    <div class="cuts">
+      <figure><div class="fr"><img src="assets/strih-vzor-hviezda.webp" width="400" height="400" loading="lazy" alt="Krátky strih s fade a vystrihaným hviezdicovým vzorom nad uchom"></div><figcaption>VZOR STROJČEKOM</figcaption></figure>
+      <figure><div class="fr"><img src="assets/strih-textura-skin-fade.webp" width="285" height="262" loading="lazy" alt="Svetlé vlasy s textúrovaným vrchom a vysokým fade po stranách"></div><figcaption>TEXTÚRA + FADE</figcaption></figure>
+      <div class="igt"><span class="lab">Z profilu na Instagrame</span><span class="mini">FADE</span><span class="mini g">BEARD</span><span class="mini c">CLASSIC</span><p>Ďalšie hotové strihy pribúdajú na Instagrame barbershopu.</p><a href="https://www.instagram.com/lucys.barber/" rel="noopener" target="_blank">@lucys.barber →</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="about sec" aria-labelledby="h-about">
+  <div class="wrap">
+    <div class="patch"><img src="assets/logo-lucys-barbershop.webp" width="361" height="390" loading="lazy" alt="Logo Lucy's Barbershop s holičským stĺpikom"></div>
+    <div>
+      <h2 class="pen" id="h-about">Pre koho strihá</h2>
+      <p class="quote" style="margin-top:30px">miesto, kde nejde len o samotný strih, ale aj o celkový štýl</p>
+      <cite>— z popisu barbershopu na Notino Salóny</cite>
+      <div class="who"><span>Pánske strihy</span><span>Fade</span><span>Úprava brady</span><span>Študenti do 20 rokov</span><span>Deti do 10 rokov</span><span>Dámske strihy</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="kontakt" aria-labelledby="h-kontakt">
+  <div class="wrap">
+    <div class="sec-head">
+      <h2 class="pen navy" id="h-kontakt">Objednanie</h2>
+      <p>Pevné otváracie hodiny barbershop neuvádza — strihá sa na objednanie. Termín dohodnete jednou z troch ciest.</p>
+    </div>
+    <div class="ways">
+      <div><span class="lab">Telefón</span><h3>Zavolajte</h3><p>Najrýchlejšia cesta k termínu.</p><a class="big-l num" href="tel:+421904599821">0904 599 821</a></div>
+      <div><span class="lab">Online</span><h3>Notino Salóny</h3><p>Služby, ceny a voľné termíny na jednom mieste.</p><a class="big-l" href="https://www.notino.sk/salony/lucys-barbershop/" rel="noopener" target="_blank">Otvoriť profil</a></div>
+      <div><span class="lab">Instagram</span><h3>Správa cez DM</h3><p>Z profilu barbershopu: <q>Rezervuj sa cez DM</q>.</p><a class="big-l" href="https://www.instagram.com/lucys.barber/" rel="noopener" target="_blank">@lucys.barber</a></div>
+    </div>
+    <div class="info">
+      <div><span class="lab">Adresa</span>Belanského 193<br>024 01 Kysucké Nové Mesto<small><a href="https://www.google.com/maps/search/Lucy's+Barbershop+Kysucké+Nové+Mesto" rel="noopener" target="_blank">Otvoriť v Mapách Google</a></small></div>
+      <div><span class="lab">Hodiny</span>Na objednanie<small>podľa Notino „na vyžiadanie“ — pevné hodiny neuvedené</small></div>
+      <div><span class="lab">Kontakt</span><a class="num" href="tel:+421904599821">+421 904 599 821</a><small>e-mail ani Facebook barbershop neuvádza</small></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap"><b>Lucy's Barbershop</b><span>Neoficiálny návrh webu · webdavid.sk · 2026</span></div>
+</footer>
+
+<nav class="mbar" aria-label="Rýchle akcie">
+  <a class="btn btn-red" href="tel:+421904599821">Zavolať</a>
+  <a class="btn btn-line" href="https://www.notino.sk/salony/lucys-barbershop/" rel="noopener" target="_blank">Notino</a>
+</nav>
+</html>
